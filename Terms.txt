@@ -1,0 +1,5 @@
+- Biến (Variable) 
+- Mảng (Array)
+- Hàm (Function)
+- Kiểu dữ liệu (Data Type) 
+- Object 

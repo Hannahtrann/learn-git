@@ -1,0 +1,29 @@
+1. Biến
+
+- Biến được sử dụng để lưu trữ giá trị: 
+Công thức: Var A = xx 
+=> Khai báo biến A, gán giá trị XX cho nó 
+VD1: Var age = 25;
+VD2: Var a = 1; var b = 2; var c = a + b;
+=> console.log(c) = 3;
+- có thể khai báo biến bằng cách sử dụng từ khóa var, let, hoặc const.
+- Biến trong JavaScript có thể lưu trữ các kiểu dữ liệu khác nhau như số nguyên, số thực, chuỗi, boolean, object, và nhiều kiểu dữ liệu khác.
+
+
+2. Các kiểu dữ liệu 
+* Primitive types: 
+- NUmber 
+- String: Chuỗi ký tự 
+VD: var str = 'Hello, word'
+VD: var str = "Hello, word"
+VD: var str = 'Hello, I\'m Hoa' >> escape a character
+- Boolean
+
+* Specific types: 
+- Undefined: var a; => Console.log(a) = undefined 
+- Null: Var a = null; 
+=>> undefined là khai báo nhưng ko gán giá trị, null là khai báo và gán nó bằng rỗng 
+
+* Reference types: 
+- Array 
+- Object
