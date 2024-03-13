@@ -25,5 +25,23 @@ VD: var str = 'Hello, I\'m Hoa' >> escape a character
 =>> undefined là khai báo nhưng ko gán giá trị, null là khai báo và gán nó bằng rỗng 
 
 * Reference types: 
-- Array 
-- Object
+- Array: mảng> mảng một chuỗi data cùng kiểu dữ liệu 
+VD: {
+  "uri": "https://example.com/webhook-endpoint",
+  "events": [
+            "property.instructions.updated",
+            "property.updated"
+             ],
+
+  "description": "Webhook for TEST"
+}
+=>> "events" ở đây là một array 
+- Object: Sẽ bao gồm nhiều biến, có thể khác kiểu dữ liệu 
+VD: một object sẽ ntn: 
+{
+  "start": "2024-03-11",
+  "end": "2024-03-15",
+  "blockDates": true,
+  "expiryAt": "2024-01-10",
+  "name": "test 1234"
+}
