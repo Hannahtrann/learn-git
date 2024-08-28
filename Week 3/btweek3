@@ -1,0 +1,112 @@
+// //Object contructor
+// function Tester(name, project, age) {
+//   this.name = name;
+//   this.project = project;
+//   this. age = age;
+// }
+// var tester1 = new Tester ("Hannah", "Madecomfy", 18);
+// var tester2 = new Tester ("MaiDung", "Sky", 19);
+
+// tester1.company = 'Adamo'
+// console.log(tester1)
+
+// //Class
+// class TesterClass {
+//     constructor(name, project, age) {
+//       this.name = name;
+//       this.project = project;
+//       this.age = age;
+//     }
+//   }
+  
+//   var tester3 = new Tester("Hannah", "Madecomfy", 18);
+//   var tester4 = new Tester("MaiDung", "Sky", 19);
+  
+//   console.log(tester2);
+// console.log(TesterClass);
+
+
+//promise
+//1. Create new promise
+//2. Executor
+//có 3 status: pendding, fulfilled (thành công), rejected
+
+// var promise = new Promise(
+//   //executor
+//   function(resolve, reject) {
+//     //Logic
+//     // Thành công: resolved()
+//     // Thất bại: reject()
+//   }
+// );
+
+// promise
+// .then(function() {
+// //đc gọi khi resolve
+// }) 
+// .catch
+// //đc gọi khi reject
+// .finally
+// ////đc gọi khi resolve lẫn reject
+
+// //cách trả dữ liệu 
+// // tính chất của promise
+// //tính chuỗi: đầu vào của đứa sau là đầu ra của đứa trước
+
+// // Hàm giả lập việc kiểm tra tính khả dụng của một phòng khách sạn
+// function checkRoomAvailability(roomNumber) {
+//   return new Promise((resolve, reject) => {
+//       // Giả lập việc kiểm tra khả dụng của phòng
+//       setTimeout(() => {
+//           let availableRooms = [101, 102, 103]; // Giả định danh sách các phòng khách sạn khả dụng
+//           if (availableRooms.includes(roomNumber)) {
+//               resolve(`Phòng số ${roomNumber} hiện đang khả dụng.`);
+//           } else {
+//               reject(`Phòng số ${roomNumber} không khả dụng.`);
+//           }
+//       }, 2000); // Giả định thời gian kiểm tra là 2 giây
+//   });
+// }
+
+// // Sử dụng Promise để đặt phòng
+// function bookRoom(roomNumber) {
+//   console.log(`Đang kiểm tra tính khả dụng của phòng số ${roomNumber}...`);
+//   checkRoomAvailability(roomNumber)
+//       .then((message) => {
+//           console.log(message);
+//           console.log(`Đang tiến hành đặt phòng số ${roomNumber}...`);
+//           // Giả lập việc đặt phòng thành công
+//           return new Promise((resolve, reject) => {
+//               setTimeout(() => {
+//                   resolve(`Phòng số ${roomNumber} đã được đặt thành công.`);
+//               }, 3000); // Giả định thời gian đặt phòng là 3 giây
+//           });
+//       })
+//       .then((successMessage) => {
+//           console.log(successMessage);
+//       })
+//       .catch((errorMessage) => {
+//           console.error(errorMessage);
+//       });
+// }
+
+// // Đặt phòng phòng số 101:
+// // bookRoom(101);
+// // Đặt phòng phòng số 102:
+// bookRoom(102);
+
+let age = 18;
+var promise = new Promise(function (resolved, rejected) {
+    if (age >= 18) {resolved('Đăng nhập thành công')
+    }
+    else
+  rejected('Đăng nhập không thành công')
+})
+
+promise.then(function (data) {
+  console.log(data);
+}).catch(function (err) {
+  console.log(err);
+}).finally(function () {
+  console.log("End!");
+})

@@ -1,0 +1,188 @@
+//HÀM - fuction tính diện tích hình chữ nhật
+function dientichhcn(a,b) {
+  return a*b
+}
+console.log(dientichhcn(5,10));
+
+//Tính chu vi hình tròn
+function chuvihinhtron(r) {
+  return r*2*3.14
+}
+console.log(chuvihinhtron(5));
+
+//Toán tử
+var a = 1;
+var b=2;
+var x = a +b; 
+console.log(x);
+var y = a - b;
+console.log (y)
+var z = a/b;
+console.log(z);
+
+//Câu điều kiện:
+var a = 2;
+var b = 3;
+var x = a + b;
+if (x===3) {
+  console.log("x bằng 3")
+} else {
+  console.log("x không bằng 3")
+}
+
+var age = 16;
+
+if (age >= 18) {
+    console.log("Tuổi của bạn là  " + age + "  , bạn đã đủ tuổi.");
+} else {
+    console.log("Tuổi của bạn là " + age + ", bạn chưa đủ tuổi.");
+};
+
+// //Vòng lặp
+// var ActiveProperty = [];
+// var InactiveProperty =[];
+// var test1 = {
+//   name: "Property1",
+//   id: 1,
+//   status: "active"
+// };
+// var test2 = {
+//   name: "Property2",
+//   id: 2,
+//   status: "inactive"
+// };
+// var test3 = {
+//   name: "Property3",
+//   id: 3,
+//   status: "active"
+// };
+
+// var properties = [test1, test2, test3];
+
+
+// for (var i = 0; i < properties.length; i++) {
+//     if (properties[i].status === "active") {
+//         ActiveProperty.push(properties[i].name);
+//     } else if (properties[i].status === "inactive") {
+//         InactiveProperty.push(properties[i].name);
+//     }
+//     console.log(i)
+//     console.log(properties.length)
+//     console.log(properties[i].status)
+// }
+ 
+// console.log("Các property active:", ActiveProperty); //Property1, Property3
+// console.log("Các property inactive:", InactiveProperty); //Property2
+
+//sử dụng vòng lặp cho kiểu đối tượng:
+
+var Properties = {
+  active: [],
+  inactive: []
+}
+var tests = {
+  test1: {
+    name: "Property1",
+    id: 1,
+    status: "active"
+  },
+  test2: {
+    name: "Property2",
+    id: 2,
+    status: "inactive"
+  },
+  test3: {
+    name: "Property3",
+    id: 3,
+    status: "active"
+  }
+};
+
+for (var testName in tests) {
+  var property = tests[testName];
+  if (property.status === "active") {
+    Properties.active.push(property.name);
+  }
+  else if (property.status === "inactive") {
+    Properties.inactive.push(property.name);
+  }
+}
+ 
+console.log ("Các property active", Properties.active);
+console.log("Các property inactie", Properties.inactive);
+
+
+// for (var i = 0; i < tests.length; i++) {
+//   var property = tests[i];
+//   if (property.status === "active") {
+//     Properties.active.push(property.name);
+//   }
+//   else if (property.status === "inactive") {
+//     Properties.inactive.push(property.name)
+//   }
+// } >> đoạn này đang sai
+
+
+//Vòng lặp Do-while:
+var Properties = {
+  active: [],
+  inactive: []
+};
+
+var tests = {
+  test1: {
+    name: "Property1",
+    id: 1,
+    status: "active"
+  },
+  test2: {
+    name: "Property2",
+    id: 2,
+    status: "inactive"
+  },
+  test3: {
+    name: "Property3",
+    id: 3,
+    status: "active"
+  }
+};
+
+// Khởi tạo biến để lặp qua từng thuộc tính của đối tượng tests
+var propertyName;
+
+// Lặp qua từng thuộc tính của đối tượng tests
+do {
+  // Lấy tên của thuộc tính
+  propertyName = Object.keys(tests)[0];
+
+  // Lấy đối tượng tương ứng với thuộc tính
+  var property = tests[propertyName];
+
+  // Xóa thuộc tính vừa lặp khỏi đối tượng tests
+  delete tests[propertyName];
+
+  // Phân loại thuộc tính vào mảng active hoặc inactive
+  if (property.status === "active") {
+    Properties.active.push(property.name);
+  } else if (property.status === "inactive") {
+    Properties.inactive.push(property.name);
+  }
+} while (Object.keys(tests).length > 0); // Kiểm tra điều kiện lặp
+
+console.log("Các property active:", Properties.active);
+console.log("Các property inactive:", Properties.inactive);
+
+
+//Object contructor
+function Tester(name, project, age) {
+  this.name = name;
+  this.project = project;
+  this. age = age;
+}
+var tester1 = new Tester (Hannah, Madecomfy, 18);
+var tester2 = new Tester (MaiDung, Sky, 19);
+
+console.log(tester1)
+
+
+
